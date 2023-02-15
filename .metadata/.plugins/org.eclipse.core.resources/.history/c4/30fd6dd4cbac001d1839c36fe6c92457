@@ -1,0 +1,91 @@
+package cep;
+
+import java.awt.EventQueue;
+
+import javax.swing.JDialog;
+import java.awt.Toolkit;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.SystemColor;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Cursor;
+
+public class Sobre extends JDialog {
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Sobre dialog = new Sobre();
+					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					dialog.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public Sobre() {
+		getContentPane().setBackground(SystemColor.control);
+		getContentPane().setEnabled(false);
+		setResizable(false);
+		setTitle("Sobre");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/home.png")));
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Buscar CEP - Ver 1.0");
+		lblNewLabel.setBounds(62, 59, 161, 14);
+		getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("@Autor Fernando Fraz\u00E3o");
+		lblNewLabel_1.setBounds(62, 101, 161, 14);
+		getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("WEBService: ");
+		lblNewLabel_2.setBounds(62, 146, 88, 14);
+		getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("https://www.republicavirtual.com.br/");
+		lblNewLabel_2_1.setForeground(SystemColor.textHighlight);
+		lblNewLabel_2_1.setBounds(148, 146, 197, 14);
+		getContentPane().add(lblNewLabel_2_1);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.setBorder(null);
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewButton.setBackground(SystemColor.control);
+		btnNewButton.setIcon(new ImageIcon(Sobre.class.getResource("/img/logo LinkedIn.png")));
+		btnNewButton.setBounds(127, 182, 48, 48);
+		getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewButton_1.setBorder(null);
+		btnNewButton_1.setBackground(SystemColor.control);
+		btnNewButton_1.setToolTipText("git");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton_1.setIcon(new ImageIcon(Sobre.class.getResource("/img/logogit.png")));
+		btnNewButton_1.setBounds(62, 182, 48, 48);
+		getContentPane().add(btnNewButton_1);
+
+	}
+
+}

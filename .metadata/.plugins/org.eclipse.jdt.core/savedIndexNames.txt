@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\re041477\Desktop\Java\Buscador de CEP\.metadata\.plugins\org.eclipse.jdt.core
+1752978121.index
+3189972.index
+3588781632.index
+1531067330.index
